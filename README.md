@@ -1,6 +1,6 @@
 ## This is a small project using Terrafrom, Helm, Docker, minikube, Jenkins, Python etc ...
 
-This guide helps people document code repositories so that they're easy to use and understand. In each section, we outline our strategies for making sure that our code repositories are clear, accessible, and user-friendly.
+Here we deploy a VPC with One public subnet, Two private subnets, NAT, ING, VPC peering
 
 ## Build
 ```shell
