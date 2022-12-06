@@ -1,6 +1,6 @@
-## This is a small project using Terrafrom, Helm, Docker, minikube, Jenkins, Python etc ...
+## This is a small project using Terrafrom, Helm, Docker, minikube, Jenkins, Python, AWS etc ...
 
-Here we deploy a VPC with One public subnet, Two private subnets, NAT, ING, VPC peering
+Here we deploy a VPC with One public subnet, Two private subnets, NAT, ING, VPC peering, k8s cluster and  microservice architecture application with mysql DB. 
 
 ![](images/diagram.jpg)
 
