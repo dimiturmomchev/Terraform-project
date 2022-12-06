@@ -2,6 +2,8 @@
 
 Here we deploy a VPC with One public subnet, Two private subnets, NAT, ING, VPC peering
 
+![](images/diagram.jpg)
+
 ## Build
 ```shell
 $ pip freeze > requirements.txt
