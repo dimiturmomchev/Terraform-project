@@ -1,0 +1,1 @@
+output "instances" { value = { for id, ec2 in module.ec2 : id => { ec2_id = ec2.ec2_id } } }

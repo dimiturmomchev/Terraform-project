@@ -1,0 +1,1 @@
+output "eks" { value = { for id, eks in module.eks : id => { eks_id = eks.eks_id } } }

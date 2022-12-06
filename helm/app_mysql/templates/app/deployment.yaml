@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Release.Name }}
+spec:
+{{ with .Values.flask_app.deploymentStrategy }}
+  strategy:
+    {{- toYaml . | nindent 4 }}
+{{- end }}
+  replicas: {{ .Values.flask_app.replicas }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Release.Name }}-container
+          image: {{ .Values.flask_app.image }}
+          imagePullPolicy: {{ .Values.flask_app.imagePullPolicy }}
+          {{ with .Values.flask_app.resources }}
+          resources:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          ports:
+            - containerPort: {{ .Values.flask_app.port }}
+              protocol: TCP

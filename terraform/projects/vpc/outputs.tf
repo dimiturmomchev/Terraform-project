@@ -1,0 +1,1 @@
+output "vpc" { value = { for id, vpc in module.vpc : id => { vpc_id = vpc.vpc_id } } }
